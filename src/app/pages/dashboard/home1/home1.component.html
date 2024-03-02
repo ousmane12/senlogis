@@ -1,0 +1,398 @@
+<!-- Header-->
+<app-header id="top"></app-header>
+
+<!-- Hero-->
+<section class="container-fluid my-5 pt-5 pb-lg-4 px-xxl-4">
+  <div class="jarallax card align-items-center justify-content-center border-0 p-md-5 p-4 bg-secondary overflow-hidden mt-n3" style="min-height: 65vh; background-image: url(assets/img/real-estate/hero-image-v2.jpg);background-position: bottom;background-size: cover;background-attachment: fixed;" data-jarallax data-speed="0.5"><span class="img-overlay opacity-40"></span>
+    <div class="content-overlay" style="max-width: 856px;">
+      <h1 class="display-5 mb-5 pb-md-3 px-md-3 text-white text-center">Le moyen le plus facile de trouver sa maison</h1>
+      <form class="form-group d-block">
+        <div class="row g-0">
+          <div class="col-md-10 d-sm-flex align-items-center">
+            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select" ngbDropdown>
+              <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown" ngbDropdownToggle><i class="fi-home me-2"></i><span class="dropdown-toggle-label rent">A louer</span></button>
+              <input type="hidden">
+              <ul class="dropdown-menu" ngbDropdownMenu id="rent-content">
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">A vendre</span></a></li>
+              </ul>
+            </div>
+            <hr class="d-sm-none my-2">
+            <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select" ngbDropdown>
+              <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown" ngbDropdownToggle><i class="fi-map-pin me-2"></i><span class="dropdown-toggle-label location">Lieu</span></button>
+              <input type="hidden">
+              <ul class="dropdown-menu" ngbDropdownMenu id="location-content">
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Dakar</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Saint Louis</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Kaolack</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Thies</span></a></li>
+              </ul>
+            </div>
+            <hr class="d-sm-none my-2">
+            <div class="dropdown w-sm-50" data-bs-toggle="select" ngbDropdown>
+              <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown" ngbDropdownToggle><i class="fi-list me-2"></i><span class="dropdown-toggle-label property">Type</span></button>
+              <input type="hidden">
+              <ul class="dropdown-menu" ngbDropdownMenu id="property-content">
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Villas</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Appartements</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Commercial</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Chambres</span></a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><span class="dropdown-item-label">Studios</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <hr class="d-md-none mt-2">
+          <div class="col-md-2 d-sm-flex align-items-center pt-3 pt-md-0">
+            <button class="btn btn-lg btn-icon btn-primary px-3 w-100" type="button">Rechercher</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Property categories-->
+<section class="container mb-5">
+  <div class="row row-cols-lg-6 row-cols-sm-3 row-cols-2 g-3 g-xl-4">
+    <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center"
+        routerLink="/catalog/rent">
+        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i
+            class="fi-real-estate-house"></i></div>
+        <h3 class="icon-box-title fs-base mb-0">Villas</h3>
+      </a></div>
+    <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center"
+        routerLink="/catalogue/louer">
+        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i
+            class="fi-apartment"></i></div>
+        <h3 class="icon-box-title fs-base mb-0">Appartements</h3>
+      </a></div>
+    <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center"
+        routerLink="/catalog/rent">
+        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-shop"></i>
+        </div>
+        <h3 class="icon-box-title fs-base mb-0">Bureaux</h3>
+      </a></div>
+    <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center"
+        routerLink="/catalogue/louer">
+        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-rent"></i>
+        </div>
+        <h3 class="icon-box-title fs-base mb-0">Location journalier</h3>
+      </a></div>
+    <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover h-100 text-center"
+        routerLink="/catalog/rent">
+        <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i
+            class="fi-house-chosen"></i></div>
+        <h3 class="icon-box-title fs-base mb-0">Studios</h3>
+      </a></div>
+    <div class="col">
+      <div class="dropdown h-100" ngbDropdown><a
+          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript: void(0);"
+          data-bs-toggle="dropdown">
+          <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto arrow-none"
+            ngbDropdownToggle><i class="fi-dots-horisontal"></i></div>
+          <h3 class="icon-box-title fs-base mb-0">Plus</h3>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end my-1" ngbDropdownMenu><a class="dropdown-item fw-bold"
+            routerLink="/catalogue/louer"><i class="fi-single-bed fs-base opacity-60 me-2"></i>Chambre</a>
+            <a class="dropdown-item fw-bold"
+            routerLink="/catalogue/louer"><i class="fi-real-estate-buy fs-base opacity-60 me-2"></i>Terrain</a><a
+            class="dropdown-item fw-bold" routerLink="/catalog/rent"><i
+              class="fi-parking fs-base opacity-60 me-2"></i>Parking</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services-->
+<!-- <section class="container mb-5 mt-n3 mt-lg-0">
+  <swiper [config]="service" class="pagination-hide">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let data of servicesData">
+        <div class="col">
+          <div class="card card-hover border-0 h-100 pb-2 pb-sm-3 px-sm-3 text-center"><img class="d-block mx-auto my-3"
+              src="{{data.image}}" width="256" alt="Illustration">
+            <div class="card-body">
+              <h2 class="h4 card-title">{{data.title}}</h2>
+              <p class="card-text fs-sm">{{data.content}}</p>
+            </div>
+            <div class="card-footer pt-0 border-0"><a class="btn btn-outline-primary stretched-link"
+                routerLink="{{data.link}}">{{data.btn}}</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </swiper>
+</section> -->
+
+<!-- Top offers (carousel)-->
+<section class="container mb-5 pb-md-4" *ngIf="appartments && appartments.length > 0">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="h3 mb-0">Nos offres</h2>
+    <!-- Check if the number of elements is greater than 4 before displaying "voir tout" link -->
+    <a *ngIf="appartments.length > 4" class="btn btn-link fw-normal p-0" routerLink="/catalog/rent">
+      voir tout<i class="fi-arrow-long-right ms-2"></i>
+    </a>
+  </div>
+
+  <div class="swiper default-swiper rounded">
+    <swiper [config]="config" class="mb-5">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let data of appartments">
+          <!-- Item -->
+          <div class="col p-2">
+            <div class="card shadow-sm card-hover border-0 h-100">
+              <div class="card-img-top card-img-hover"><a class="img-overlay" routerLink="/catalogue/detail/{{data.idAppartement}}"></a>
+                <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                    class="d-table badge bg-success mb-1">{{data.type}}</span>
+                  </div>
+                    <div class="carousel-item active" *ngFor="let image of data.images">
+                      <img [src]="image.url" class="d-block w-100" alt="...">
+                  </div>
+              </div>
+              <div class="card-body position-relative pb-3">
+                <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{data.type}}</h4>
+                <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link"
+                    routerLink="/catalogue/detail/{{data.idAppartement}}">Niveau: {{data.niveau}}</a></h3>
+                <p class="mb-2 fs-sm text-muted">Prix: {{data.loyerHt}} FCFA HT</p>
+                <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>{{data.loyerTtc}} FCFA TTC</div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                  class="d-inline-block mx-1 px-2 fs-sm">{{data.porte}}<i
+                    class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                  class="d-inline-block mx-1 px-2 fs-sm">{{data.porte}}<i
+                    class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </swiper>
+    <div class="swiper-pagination mt-5"></div>
+  </div>
+</section>
+
+<!-- Recently added-->
+<section class="container pb-4 pt-1 mb-5">
+  <div class="d-flex align-items-end align-items-lg-center justify-content-between mb-4 pb-md-2">
+    <div class="d-flex w-100 align-items-center justify-content-between justify-content-lg-start">
+      <h2 class="h3 mb-0 me-md-4"> Par categorie</h2>
+      <div class="dropdown d-md-none" data-bs-toggle="select">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"><span
+            class="dropdown-toggle-label">Houses</span></button>
+        <input type="hidden">
+        <div class="dropdown-menu"><a class="dropdown-item" href="javascript:void(0);"><span
+              class="dropdown-item-label">Appartements</span></a><a class="dropdown-item" href="javascript:void(0);"><span
+              class="dropdown-item-label">Maisons</span></a><a class="dropdown-item" href="javascript:void(0);"><span
+              class="dropdown-item-label">Chambres</span></a><a class="dropdown-item" href="javascript:void(0);"><span
+              class="dropdown-item-label">Commercial</span></a></div>
+      </div>
+      <ul class="nav nav-tabs d-none d-md-flex ps-lg-2 mb-0">
+        <li class="nav-item"><a class="nav-link fs-sm mb-2 mb-md-0" href="javascript: void(0);"
+            (click)="activeCategory('APPARTEMENT')" [ngClass]="{'active': galleryFilter ==='Apartments'}">Appartements</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fs-sm active mb-2 mb-md-0" href="javascript: void(0);"
+            (click)="activeCategory('MAISON')" [ngClass]="{'active': galleryFilter ==='Houses'}">Maisons</a></li>
+        <li class="nav-item"><a class="nav-link fs-sm mb-2 mb-md-0" href="javascript: void(0);"
+            (click)="activeCategory('CHAMBRE')" [ngClass]="{'active': galleryFilter ==='Rooms'}">Chambres</a></li>
+        <li class="nav-item"><a class="nav-link fs-sm mb-2 mb-md-0" href="javascript: void(0);"
+            (click)="activeCategory('BUREAU')" [ngClass]="{'active': galleryFilter ==='Commercial'}">Commercial</a>
+        </li>
+      </ul>
+    </div><a class="btn btn-link fw-normal d-none d-lg-block p-0" routerLink="/catalog/rent">Voir pLus<i
+        class="fi-arrow-long-right ms-2"></i></a>
+  </div>
+  <div class="row g-4" data-groups='["branding"]'>
+    <div *ngIf="appartments && appartments.length === 0" class="col-md-12">
+      <p class="text-center btn btn-sm text-primary d-none d-lg-block order-lg-3">Aucune donnée pour cette categorie</p>
+    </div>
+    <div class="col-md-6" *ngFor="let item of appartments">
+      <div class="card bg-size-cover bg-position-center border-0 overflow-hidden h-100"
+        style="background-image: url({{item.porte}});"><span class="img-gradient-overlay"></span>
+        <div class="card-body content-overlay pb-0">
+          <div class="d-flex"><span class="badge bg-success fs-sm me-2">{{item.type}}</span><span
+              class="badge fs-sm {{item.porte}}">{{item.loyerHt}} FCFA HT</span></div>
+        </div>
+        <div class="card-footer content-overlay border-0 pt-0 pb-4">
+          <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5"><a
+              class="text-decoration-none text-light pe-2" routerLink="/catalogue/detail/{{item.idAppartement}}">
+              <div class="fs-sm text-uppercase pt-2 mb-1">{{item.loyerHt}} FCFA HT</div>
+              <h3 class="h5 text-light mb-1">{{item.loyerTtc}}</h3>
+              <div class="fs-sm opacity-70"><i class="fi-map-pin me-1"></i>{{item.loyerTtc}} FCFA TTC</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cities (carousel)-->
+<!-- <section class="container mb-5 pb-2">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="h3 mb-0">Rechercher une propriété  par ville</h2><a class="btn btn-link fw-normal ms-md-3 pb-0"
+      routerLink="/catalog/rent">View all<i class="fi-arrow-long-right ms-2"></i></a>
+  </div>
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let data of cityData">
+        
+        <div class="col p-2"><a class="card shadow-sm card-hover border-0" routerLink="/catalog/sale">
+            <div class="card-img-top card-img-hover"><span class="img-overlay opacity-65"></span><img
+                src="{{data.image}}" alt="New York">
+              <div
+                class="content-overlay start-0 top-0 d-flex align-items-center justify-content-center w-100 h-100 p-3">
+                <div class="w-100 p-1">
+                  <div class="mb-2">
+                    <h4 class="mb-2 fs-xs fw-normal text-light"><i
+                        class="fi-wallet mt-n1 me-2 fs-sm align-middle"></i>Propriété à vendre</h4>
+                    <div class="d-flex align-items-center">
+                      <div class="progress progress-light w-100">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div><span class="text-light fs-sm ps-1 ms-2">{{data.sale_count}}</span>
+                    </div>
+                  </div>
+                  <div class="pt-1">
+                    <h4 class="mb-2 fs-xs fw-normal text-light"><i
+                        class="fi-home mt-n1 me-2 fs-sm align-middle"></i>Propriété à louer </h4>
+                    <div class="d-flex align-items-center">
+                      <div class="progress progress-light w-100">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span class="text-light fs-sm ps-1 ms-2">{{data.rent_count}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <h3 class="mb-0 fs-base text-nav">{{data.title}}</h3>
+            </div>
+          </a></div>
+        
+      </div>
+    </div>
+  </swiper>
+  <div class="swiper-pagination"></div>
+</section> -->
+
+<!-- Partners (carousel)-->
+<section class="container mb-5 pb-2 pb-lg-4">
+  <h2 class="h3 mb-4 text-center text-md-start">Nos partenaires</h2>
+  <swiper [config]="companies" class="pagination-hide">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let data of companiesData">
+      <div class="pb-1"><a class="swap-image" routerLink="/account/employer"><img class="swap-to" src="{{data.himage}}"
+            width="196" alt="Microsoft"><img class="swap-from" src="{{data.image}}" width="196" alt="Microsoft"></a>
+      </div>
+    </div>
+    </div>
+  </swiper>
+</section>
+
+<!-- Top agents (lnked carousel)-->
+<!-- <section class="container mb-5 pb-2 pb-lg-4">
+  <h2 class="h3 mb-4 pb-3 text-center text-md-start">Top real estate agents</h2>
+  <swiper [config]="agents">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let data of agentsData">
+      <div class="row align-items-center m-0">
+        <div class="col-xl-4 d-none d-xl-block"><img class="rounded-3" src="{{data.image1}}" alt="Agent picture"></div>
+        <div class="col-xl-4 col-md-5 col-sm-4"><img class="rounded-3" src="{{data.image2}}" alt="Agent picture"></div>
+        <div class="col-xl-4 col-md-7 col-sm-8 px-4 px-sm-3 px-md-0 ms-md-n4 mt-n5 mt-sm-0 py-3">
+          <div class="card border-0 shadow-sm ms-sm-n5">
+            <blockquote class="blockquote card-body">
+              <h4 style="max-width: 22rem;">&quot;{{data.title}}&quot;</h4>
+              <p class="d-sm-none d-lg-block">{{data.cantante}}</p>
+              <footer class="d-flex justify-content-between">
+                <div class="pe-3"><a class="text-decoration-none" routerLink="/vendor/properties">
+                    <h6 class="mb-0">{{data.name}}</h6>
+                    <div class="text-muted fw-normal fs-sm mb-3">{{data.agent}}</div>
+                  </a><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                    href="javascript:void(0);"><i class="fi-facebook"></i></a><a
+                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                    href="javascript:void(0);"><i class="fi-twitter"></i></a><a
+                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                    href="javascript:void(0);"><i class="fi-linkedin"></i></a></div>
+                <div><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i
+                      class="star-rating-icon fi-star-filled active"></i><i
+                      class="star-rating-icon fi-star-filled active"></i><i
+                      class="star-rating-icon fi-star-filled active"></i><i
+                      class="star-rating-icon fi-star-filled active"></i></span>
+                  <div class="text-muted fs-sm mt-1">{{data.reviews}} reviews</div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </swiper>
+</section> -->
+
+<!-- Property cost calculator modal-->
+<!-- <ng-template #content role="document" let-modal>
+  <div class="modal-header d-block position-relative border-0 px-sm-5 px-4">
+    <h3 class="h4 modal-title mt-4 text-center">Explore your property’s value</h3>
+    <button class="btn-close position-absolute top-0 end-0 mt-3 me-3" type="button" data-bs-dismiss="modal"
+      aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body px-sm-5 px-4">
+    <form class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label class="form-label fw-bold mb-2" for="property-city">Property location</label>
+        <select class="form-control form-select" id="property-city" required>
+          <option value="" selected disabled hidden>Choose city</option>
+          <option value="Chicago">Chicago</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="New York">New York</option>
+          <option value="San Diego">San Diego</option>
+        </select>
+        <div class="invalid-feedback">Please choose the city.</div>
+      </div>
+      <div class="mb-3">
+        <select class="form-control form-select" id="property-district" required>
+          <option value="" selected disabled hidden>Choose district</option>
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Manhattan">Manhattan</option>
+          <option value="Staten Island">Staten Island</option>
+          <option value="The Bronx">The Bronx</option>
+          <option value="Queens">Queens</option>
+        </select>
+        <div class="invalid-feedback">Please choose the district.</div>
+      </div>
+      <div class="pt-2 mb-3">
+        <label class="form-label fw-bold mb-2" for="property-address">Address</label>
+        <input class="form-control" type="text" id="property-address" placeholder="Enter your address" required>
+        <div class="invalid-feedback">Please enter your property's address.</div>
+      </div>
+      <div class="pt-2 mb-3">
+        <label class="form-label fw-bold mb-2">Number of rooms</label>
+        <div class="btn-group" role="group" aria-label="Choose number of rooms">
+          <input class="btn-check" type="radio" id="rooms-1" name="rooms">
+          <label class="btn btn-outline-secondary" for="rooms-1">1</label>
+          <input class="btn-check" type="radio" id="rooms-2" name="rooms">
+          <label class="btn btn-outline-secondary" for="rooms-2">2</label>
+          <input class="btn-check" type="radio" id="rooms-3" name="rooms">
+          <label class="btn btn-outline-secondary" for="rooms-3">3</label>
+          <input class="btn-check" type="radio" id="rooms-4" name="rooms">
+          <label class="btn btn-outline-secondary" for="rooms-4">4</label>
+          <input class="btn-check" type="radio" id="rooms-5" name="rooms">
+          <label class="btn btn-outline-secondary" for="rooms-5">5+</label>
+        </div>
+      </div>
+      <div class="pt-2 mb-4">
+        <label class="form-label fw-bold mb-2" for="property-area">Total area, sq.m.</label>
+        <input class="form-control" type="text" id="property-area" placeholder="Enter your area" required>
+        <div class="invalid-feedback">Please enter your property's area.</div>
+      </div>
+      <button class="btn btn-primary d-block w-100 mb-4" type="submit"><i
+          class="fi-calculator me-2"></i>Calculate</button>
+    </form>
+  </div>
+</ng-template>
+ -->
+
+<!-- Footer-->
+<app-footer></app-footer>

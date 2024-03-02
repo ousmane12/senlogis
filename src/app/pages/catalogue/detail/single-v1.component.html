@@ -1,0 +1,127 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header id="top"></app-header>
+
+  <!-- Page header-->
+  <section class="container pt-5 mt-5">
+    <!-- Breadcrumb-->
+    <app-breadcrumbs [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+    <h1 class="h2 mb-2">{{appartment.description}}</h1>
+    <p class="mb-2 pb-1 fs-lg">{{appartment.state.nom}}</p>
+    <!-- Features + Sharing-->
+    <div class="d-flex justify-content-between align-items-center">
+      <ul class="d-flex mb-4 list-unstyled">
+        <li class="me-3 pe-3 border-end"><b class="me-1">4</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i>
+        </li>
+        <li class="me-3 pe-3 border-end"><b class="me-1">2</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i>
+        </li>
+        <li class="me-3 pe-3 border-end"><b class="me-1">2</b><i class="fi-car mt-n1 lead align-middle text-muted"></i>
+        </li>
+      </ul>
+      <div class="text-nowrap">
+        
+        <div class="dropdown d-inline-block" placement="top" ngbTooltip="Share">
+          <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button"
+            data-bs-toggle="dropdown"><i class="fi-share"></i></button>
+          <div class="dropdown-menu dropdown-menu-end my-1">
+            <button class="dropdown-item" type="button"><i
+                class="fi-facebook fs-base opacity-75 me-2"></i>Facebook</button>
+            <button class="dropdown-item" type="button"><i
+                class="fi-twitter fs-base opacity-75 me-2"></i>Twitter</button>
+            <button class="dropdown-item" type="button"><i
+                class="fi-instagram fs-base opacity-75 me-2"></i>Instagram</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery-->
+  <section class="container overflow-auto mb-4 pb-3" data-simplebar>
+    <div class="row g-2 g-md-3 gallery" data-thumbnails="true" style="min-width: 30rem;">
+      <div class="col-8" *ngFor="let image of appartment.images; let i = index">
+        <a class="gallery-item rounded rounded-md-3" href="javascript:void(0);" (click)="customOpen(i)">
+          <img [src]="image.url" alt="Gallery thumbnail">
+        </a>
+      </div>
+    </div>    
+  </section>
+  <!-- Post content-->
+  <section class="container mb-5 pb-1">
+    <div class="row">
+      <div class="col-md-7 mb-md-0 mb-4">
+        <h2 class="h3 mb-4 pb-4 border-bottom">{{appartment.loyerTtc}} FCFA<span
+            class="d-inline-block ms-1 fs-base fw-normal text-body">/mois</span></h2>
+        <!-- Overview-->
+        <div class="mb-4 pb-md-3">
+          <h3 class="h4">Description</h3>
+          <p class="mb-1">{{appartment.description}}</p>
+          
+        </div>
+        <!-- Property Details-->
+        <div class="mb-4 pb-md-3">
+          <h3 class="h4">Détails</h3>
+          <ul class="list-unstyled mb-0">
+            <li><b>Type: </b>{{appartment.type}}</li>
+            <li><b>Chambres: </b>4</li>
+            <li><b>Toilletes: </b>2</li>
+            <li><b>Places Parking: </b>2</li>
+          </ul>
+        </div>
+        <!-- Amenities-->
+        <div class="mb-4 pb-md-3">
+          <h3 class="h4">Amenagements</h3>
+          <ul class="list-unstyled row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-1 mb-1 text-nowrap">
+            <li class="col"><i class="fi-wifi mt-n1 me-2 fs-lg align-middle"></i>WiFi</li>
+            <li class="col"><i class="fi-thermometer mt-n1 me-2 fs-lg align-middle"></i>Parking</li>
+            <li class="col"><i class="fi-dish mt-n1 me-2 fs-lg align-middle"></i>Climatisé</li>
+            <li class="col"><i class="fi-parking mt-n1 me-2 fs-lg align-middle"></i>Machine à laver</li>
+            <li class="col"><i class="fi-snowflake mt-n1 me-2 fs-lg align-middle"></i>Camera de sécurité</li>
+          </ul>
+        
+          </div>
+        <!-- Post meta-->
+        <div class="mb-lg-5 mb-md-4 pb-lg-2 py-4 border-top">
+          <ul class="d-flex mb-4 list-unstyled fs-sm">
+            <li class="me-3 pe-3 border-end">Publié le: <b>{{appartment.dateCreated}}</b></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Sidebar-->
+      <aside class="col-lg-4 col-md-5 ms-lg-auto pb-1">
+        <!-- Contact card-->
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <div class="d-flex align-items-start justify-content-between"><a class="text-decoration-none"
+                routerLink="/vendor/properties"><img class="rounded-circle mb-2" src="assets/img/avatars/22.jpg"
+                  width="60" alt="Avatar">
+                <h5 class="mb-1">Agence</h5>
+                <p class="text-body">Imperial Property Group Agent</p>
+              </a>
+            </div>
+            <ul class="list-unstyled border-bottom mb-4 pb-4">
+              <li><a class="nav-link fw-normal p-0" href="tel:3025550107"><i
+                    class="fi-phone mt-n1 me-2 align-middle opacity-60"></i>(302) 555-0107</a></li>
+              <li><a class="nav-link fw-normal p-0" href="mailto:floyd_miles@email.com"><i
+                    class="fi-mail mt-n1 me-2 align-middle opacity-60"></i>floyd_miles@email.com</a></li>
+            </ul>
+            <!-- Contact form-->
+            <form class="needs-validation" novalidate (ngSubmit)="validSubmit()" [formGroup]="validationform">
+              <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Votre nom*" required formControlName="name"
+                  [ngClass]="{'is-invalid': submit && form['name'].errors}">
+                <div class="invalid-feedback">Veuillez entrer votre nom!</div>
+              </div>
+              <input class="form-control mb-3" type="tel" placeholder="Téléphone">
+              <textarea class="form-control mb-3" rows="3" placeholder="Message" style="resize: none;"></textarea>
+              <button class="btn btn-lg btn-primary d-block w-100" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+<!-- Footer-->
+<app-footer></app-footer>
